@@ -55,7 +55,7 @@ article.addEventListener('click', () => {
     }, 2000);
     return;
   }
-  if (month < 0 || month > 12) {
+  if (month < 0 || month > 12 || month > date.getMonth() + 1) {
     divErrorMessage('must be a valid month', 'month');
     const doc = document.getElementById(`month`);
     doc.previousElementSibling.style.color = `var(--light-red)`;
